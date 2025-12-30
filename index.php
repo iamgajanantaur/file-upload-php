@@ -601,9 +601,7 @@ function formatBytes($bytes, $precision = 2) {
         </div>
 
         <footer>
-            <p>File Upload System | Uploads are stored in the <strong>uploads/</strong> directory</p>
-            <p><strong>Upload Mode:</strong> Upload only | <strong>Admin Mode:</strong> Full access</p>
-            <p><a href="admin.php" class="btn btn-admin" style="margin-top: 10px;">Access Admin Panel</a></p>
+            <p>© 2025 SunBeam Infotech Pvt. Ltd. - File Upload Portal. All rights reserved.</p>
         </footer>
     </div>
 
