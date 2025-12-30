@@ -2,7 +2,7 @@
 session_start();
 
 // ===================== CONFIGURATION =====================
-$uploadDir = 'uploads/';
+$uploadDir = '../uploads/';
 $maxFileSize = 1024 * 1024 * 1024; // 1GB for videos
 $allowedTypes = ['jpg', 'jpeg', 'png', 'gif', 'pdf', 'txt', 'doc', 'docx', 'zip', 
                  'mp4', 'avi', 'mov', 'wmv', 'flv', 'mkv', 'webm', 'm4v', 'mpg', 'mpeg'];
