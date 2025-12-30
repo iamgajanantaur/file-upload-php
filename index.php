@@ -598,36 +598,6 @@ function formatBytes($bytes, $precision = 2) {
 
             <button id="uploadButton" class="btn btn-upload" style="display: none;">Start Upload</button>
 
-            <!-- Fallback form for non-JS browsers -->
-            <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee;">
-                <h3>Alternative Upload (No JavaScript)</h3>
-                <form method="POST" enctype="multipart/form-data">
-                    <div class="form-group">
-                        <label for="file_regular">Select file to upload:</label>
-                        <input type="file" name="file_regular" id="file_regular" required>
-                    </div>
-                    <button type="submit" class="btn btn-upload">Upload File</button>
-                </form>
-            </div>
-        </div>
-
-        <!-- Admin Access Section -->
-        <div class="admin-access">
-            <h3>Admin Access</h3>
-            <p>Need to manage files? Administrators can view and manage all uploaded files.</p>
-            <a href="admin.php" class="btn btn-admin">Go to Admin Panel</a>
-        </div>
-
-        <!-- PHP Configuration Information -->
-        <div class="php-info">
-            <h3>System Information</h3>
-            <ul>
-                <li>Upload directory: <?php echo realpath($uploadDir); ?> (<?php echo is_writable($uploadDir) ? 'Writable' : 'Not Writable'; ?>)</li>
-                <li>PHP upload_max_filesize: <?php echo $uploadMaxFilesize; ?></li>
-                <li>PHP post_max_size: <?php echo $postMaxSize; ?></li>
-                <li>Application max file size: <?php echo formatBytes($maxFileSize); ?></li>
-                <li>Current mode: Uploader (can only upload)</li>
-            </ul>
         </div>
 
         <footer>
