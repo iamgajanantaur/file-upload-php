@@ -4,7 +4,7 @@ ob_start();
 
 // ===================== CONFIGURATION =====================
 $uploadDir = '../uploads/';
-$maxFileSize = 1024 * 1024 * 1024; // 1GB for videos
+$maxFileSize = 3 * 1024 * 1024 * 1024; // 3GB for videos
 $allowedTypes = ['jpg', 'jpeg', 'png', 'gif', 'pdf', 'txt', 'doc', 'docx', 'zip',
                  'mp4', 'avi', 'mov', 'wmv', 'flv', 'mkv', 'webm', 'm4v', 'mpg', 'mpeg'];
 // =========================================================
@@ -563,12 +563,12 @@ function formatBytes($bytes, $precision = 2) {
         <?php if (!empty($uploadMessage)) echo $uploadMessage; ?>
 
         <div class="uploader-info">
-            <p><strong>Welcome to the File Upload Portal!</strong> You can upload files, but you cannot see, download, or delete files uploaded by others. Only administrators have access to the file list.</p>
+            <p><strong>Welcome to the File Upload Portal!</strong> <br>You can upload files, but you cannot see, download, or delete files uploaded by others. <br>Only administrators have access to the file list.</p>
         </div>
 
         <!-- Upload Section -->
         <div class="upload-section">
-            <h2>Upload Video/File (Max 1GB)</h2>
+            <h2>Upload Video/File (Max 3GB)</h2>
 
             <div class="upload-zone" id="uploadZone">
                 <div class="upload-icon">📁</div>
@@ -752,7 +752,7 @@ function formatBytes($bytes, $precision = 2) {
 
                     // Check if response is JSON
                     const contentType = xhr.getResponseHeader('Content-Type');
-                    
+
                     if (contentType && contentType.includes('application/json')) {
                         try {
                             const response = JSON.parse(xhr.responseText);

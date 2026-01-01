@@ -4,8 +4,8 @@ ob_start();
 
 // ===================== CONFIGURATION =====================
 $uploadDir = '../uploads/';
-$adminUsername = 'admin';  // Change this
-$adminPassword = 'admin123';  // Change this to a strong password
+$adminUsername = 'sunbeam';  // Change this
+$adminPassword = 'Sunbeam@123';  // Change this to a strong password
 // =========================================================
 
 // Handle login
@@ -566,7 +566,6 @@ function getFileTypeClass($ext) {
                                     <td>
                                         <div class="file-actions">
                                             <a href="?download=<?php echo urlencode($file['name']); ?>" class="btn btn-admin">Download</a>
-                                            <a href="?delete=<?php echo urlencode($file['name']); ?>" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete <?php echo htmlspecialchars($file['name']); ?>?')">Delete</a>
                                         </div>
                                     </td>
                                 </tr>
